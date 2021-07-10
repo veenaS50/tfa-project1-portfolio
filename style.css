@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: #35a22c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.fa {  
+    padding: 15px;  
+    text-align: center;  
+    margin: 5px 2px;  
+    font-size: 30px; 
+    width: 50px;   
+}  
+
+.fa-linkedin {  
+    background: #007bb5;  
+    color: white;  
+}  
+
+  
+.section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/pexels-adrien-olichon-2387793.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+header nav.navbar {
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+header nav.navbar .navbar-brand {
+    color: #FFF;
+    font-size: 1.4rem;
+}
+
+header nav.navbar .navbar-nav .nav-item {
+    margin-right: .5rem;
+}
+
+header nav.navbar .navbar-nav .nav-item .nav-link {
+    padding: .5rem;
+    color: #FFF;
+    transition: .3s;
+}
+
+header nav.navbar .navbar-nav .nav-item .nav-link:hover, header nav.navbar .navbar-nav .nav-item.active .nav-link {
+    color: var(--primary-color);
+}
+
+header nav.navbar .navbar-toggler {
+    color: #FFF;
+    font-size: 1.3rem;
+    cursor: pointer;
+    z-index: 999;
+    outline: none;
+    background-color: var(--primary-color);
+}
+
+header .header-content {
+    position: absolute;
+    z-index: 999;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: left;      /* this was center */
+    flex-direction: column;
+}
+
+/* header .header-content img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border: 3px solid #FFF;
+} */
+
+header .header-content .content {
+    z-index: 999;
+    margin-top: 20px;
+    text-align: left;
+}
+
+header .header-content .content h2 {
+    color: #FFF;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+header .header-content .content p {
+    font-size: 1.3rem;
+    color: #FFF;
+    font-weight: 500;
+}
+
+.about-container {
+	display: flex;
+}
+
+.about-left img {
+	margin: 70px;
+}
+
+.about-right {
+	margin: 50px;
+	padding: 60px;
+    text-align: justify;
+}
+
+.image-container img {
+    overflow: hidden;
+    height: 250px;
+    /* padding: 10px 10px; */
+}
+
+.skills-container {
+    color: #ffffff;
+    background-image: url("images/jeremy-bishop-fxhjyQSxDeE-unsplash.jpg");
+	width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* for the background image to remain fixed */
+    position: relative;
+    height: 500px;
+}
+
+
+.skills-items {
+    padding: 20px;
+}
+
+.button {
+    background-color: rgba(255, 255, 255, .2);
+    /* border-radius: 40px; */
+    padding: 10px;
+    color:#35a22c;
+}
+
+.button:hover {
+    background-color: black;
+    color: #35a22c;
+    animation: ease-in;
+    transition: 0.4s;
+    transform: scale(1.1);
+}
+
+.little-box {
+    /* padding: 10px; */
+    margin: 0px;
+    /* background-color: rgba(0, 0, 0, .5); */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box-content {
+    background-color: black;
+    border-radius: 70px;
+    /* margin: 10px; */
+    padding: 15px;
+    color: #ffffff;
+}
+
+.timeline-section h1 {
+    color:#ffffff;
+}
+
+.timeline-section{
+	background-color: #24292d;
+    /* background-color: green; */
+	min-height: 100vh;
+	padding: 40px 15px;  /* to adjust the heading education */
+}
+.timeline-items{
+	max-width: 1000px;
+	margin:auto;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+.timeline-items::before{
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	background-color: #2f363e;
+	left: calc(50% - 1px);
+}
+.timeline-item{
+	margin-bottom: 40px;
+	width: 100%;
+	position: relative;
+}
+.timeline-item:last-child{
+	margin-bottom: 0;
+}
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+	text-align: right;
+}
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+.timeline-dot{
+	height: 16px;
+	width: 16px;
+	background-color: #35a22c;
+	position: absolute;
+	left: calc(50% - 8px);
+	border-radius: 50%;
+	top:10px;
+}
+.timeline-date{
+	font-size: 18px;
+	color: #35a22c;
+	margin:6px 0 15px;
+}
+.timeline-content{
+    background-color: #2f363e;
+	padding: 30px;
+	border-radius: 5px;
+}
+.timeline-content h3{
+    font-size: 20px;
+	color: #ffffff;
+	margin:0 0 10px;
+	text-transform: capitalize;
+	font-weight: 500;
+}
+.timeline-content p{
+    color: #c8c8c8;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 15px;    /* this was 22 */
+}
+
+/* responsive */
+@media(max-width: 767px){
+	.timeline-items::before{
+		left: 7px;
+	}
+	.timeline-item:nth-child(odd){
+		padding-right: 0;
+		text-align: left;
+	}
+	.timeline-item:nth-child(odd),
+	.timeline-item:nth-child(even){
+		padding-left: 37px;
+	}
+	.timeline-dot{
+		left:0;
+	}
+}
+
+.achievements-con {
+    color: #ffffff;
+    background-image: url("images/dave-hoefler-6izXYgG1L2M-unsplash.jpg");
+	width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* for the background image to remain fixed */
+    position: relative;
+}
+
+.achievements-container {
+	height: 400px; /* for adjusting the section height */
+	display: flex;
+    justify-content: space-around;
+}
+
+.card-container {
+    background-color: rgba(255, 255, 255, .2);
+    border-radius: 5px;
+    width: 400px;
+	height: 200px;
+	margin: 40px;
+    
+    overflow: hidden;
+    box-shadow: 0px 0px 15px -5px;
+    transition: 0.5s;   /* to ease the speed */
+    animation: ease-in;
+	color: #ffffff;
+
+    padding: 20px;
+}
+
+.card-container:hover {
+    background-color: rgba(0, 0, 0, .5);
+    transform: scale(1.1); /* for pop-out motion */
+    box-shadow: 0px 0px 15px 0px;
+}
+
