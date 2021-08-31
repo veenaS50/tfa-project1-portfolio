@@ -124,70 +124,79 @@ header .header-content .content p {
     font-weight: 500;
 }
 
-.about-container {
-	display: flex;
+
+
+/* ------------ ABOUT SECTION -------------*/
+
+.about {
+    width: 100%;
 }
 
-.about-left img {
-	margin: 70px;
-}
-
-.about-right {
-	margin: 50px;
-	padding: 60px;
+.about .content {
     text-align: justify;
 }
 
-.image-container img {
-    overflow: hidden;
-    height: 250px;
-    /* padding: 10px 10px; */
+.about .content h2 {
+    font-weight: 700;
+    color: #111;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    margin-bottom: 20px;
 }
 
-.skills-container {
-    color: #ffffff;
-    background-image: url("images/jeremy-bishop-fxhjyQSxDeE-unsplash.jpg");
-	width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* for the background image to remain fixed */
-    position: relative;
-    height: 500px;
+.about .content p {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
-
-.skills-items {
-    padding: 20px;
-}
-
-.button {
-    background-color: rgba(255, 255, 255, .2);
-    /* border-radius: 40px; */
-    padding: 10px;
-    color:#35a22c;
-}
-
-.button:hover {
-    background-color: black;
-    color: #35a22c;
-}
-
-.little-box {
-    /* padding: 10px; */
-    margin: 0px;
-    /* background-color: rgba(0, 0, 0, .5); */
+.about .about-buttons {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    transform: translateY(30px);
 }
 
-.box-content {
-    font-weight: bold;
-    background-color: black;
-    border-radius: 70px;
-    /* margin: 10px; */
-    padding: 15px;
-    color: #ffffff;
+.about .about-buttons .about-buttons-content {
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    border: 2px solid;
+    border-radius: 30px;
+    padding: .7rem 2rem;
+    margin: 0 .5rem;
+    /* margin-top: 20px; */
+    margin-bottom: 10px;
+    transition: .3s;
 }
+
+.about .about-buttons .about-buttons-content:hover {
+    color: var(--primary-color);
+}
+
+
+
+/* -----------PROJECTS SECTION -----------*/
+
+#projects-heading {
+    text-align: left;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.card {
+    transition: 0.5s;   
+    animation: ease-in;
+    border: 10px solid;
+    /* transform: scale(1.1); */
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* ---------TIMELINE SECTION ---------*/
 
 .timeline-section h1 {
     color:#ffffff;
@@ -280,41 +289,82 @@ header .header-content .content p {
 	}
 }
 
-.achievements-con {
-    color: #ffffff;
-    background-image: url("images/dave-hoefler-6izXYgG1L2M-unsplash.jpg");
-	width: 100%;
+
+
+/* ----------ACHIEVEMENTS SECTION -----------*/
+
+.services {
+    background-image: url(../images/dave-hoefler-6izXYgG1L2M-unsplash.jpg);
+    width: 100%;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* for the background image to remain fixed */
+    background-attachment: fixed;
     position: relative;
 }
 
-.achievements-container {
-	height: 400px; /* for adjusting the section height */
-	display: flex;
-    justify-content: space-around;
+.services::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .3);
+    width: 100%;
+    height: 100%;
 }
 
-.card-container {
+.services .content {
+    z-index: 999;
+    position: relative;
+    color: #FFF;
+}
+
+.services .content h2 {
+    color: #FFF;
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-align: left; 
+    /* text-align: center;  */
+    margin-bottom: 20px;
+}
+
+.services .content .single-achieve {
     background-color: rgba(255, 255, 255, .2);
     border-radius: 5px;
-    width: 400px;
-	height: 200px;
-	margin: 40px;
-    
-    overflow: hidden;
-    box-shadow: 0px 0px 15px -5px;
-    transition: 0.5s;   /* to ease the speed */
-    animation: ease-in;
-	color: #ffffff;
-
-    padding: 20px;
+    padding: 30px;
+    margin: 20px;
+    transition: .4s all ease-in-out;
 }
 
-.card-container:hover {
+.services .content .single-achieve:hover {
     background-color: rgba(0, 0, 0, .5);
-    transform: scale(1.1); /* for pop-out motion */
-    box-shadow: 0px 0px 15px 0px;
+}
+
+.services .content .single-achieve * {
+    text-align: center;
+}
+
+.services .content .single-achieve i {
+    font-size: 3rem;
+    color: rgb(75, 201, 64);
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+    transition: .3s;
+}
+
+.services .content .single-achieve:hover i {
+    color: var(--primary-color);
+}
+
+.services .content .single-acieve h4 {
+    font-size: 1.5rem;
+    color: #FFF;
+    font-weight: 600;
+}
+
+.services .content .single-achieve p {
+    font-size: 1rem;
+    color: #f1f1f1;
+    text-align: justify;
 }
 
