@@ -194,6 +194,9 @@ header .header-content .content p {
     transform: scale(1.1);
 }
 
+.card-text {
+    text-align: justify;
+}
 
 
 /* ---------TIMELINE SECTION ---------*/
